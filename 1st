@@ -1,0 +1,25 @@
+def isPrime(n):
+    i = 2
+    if n == 0:
+        return False
+    elif n == 2:
+        return True
+    while i<= n/2:
+        if n%i==0:
+            return False
+        i+=1
+    return True
+def factorSum(n):
+    if n==4:
+        return 4
+    while isPrime(n) == False:
+        Sum = 0
+        i = 2
+        while i<n and isPrime(n) == False:
+            if n%i==0:
+                Sum+=i
+                n/=i
+                i=1
+            i+=1
+        n+=Sum
+    return n
