@@ -1,0 +1,24 @@
+if __name__ == '__main__':
+    N = int(input())
+    lst=[]
+    for _ in range(N):
+        cmd = input().split()
+        act = cmd[0]
+        if act == "insert":
+            location = int(cmd[1])
+            value = int(cmd[2])
+            lst.insert(location, value)
+        elif act == "print":
+            print(lst)
+        elif act == "remove":
+            value = int(cmd[1])
+            lst.remove(value)
+        elif act == "append":
+            value= int(cmd[1])
+            lst.append(value)
+        elif act == "sort":
+            lst.sort()
+        elif act == "pop":
+            lst.pop()
+        elif act == "reverse":
+            lst.reverse()
